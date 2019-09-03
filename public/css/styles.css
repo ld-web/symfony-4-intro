@@ -1,0 +1,71 @@
+body
+{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#home-bg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/home.jpg);
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+
+#home-content
+{
+    margin-top: 10em;
+    margin-left: 15%;
+}
+
+#home-content *
+{
+    opacity: 0;
+}
+
+#home-content *
+{
+    animation-name: revealOpacity;
+    animation-fill-mode: forwards;
+}
+
+#home-content h1
+{
+    font-size: 6em;
+    text-transform: uppercase;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+}
+
+#home-content a
+{
+    padding: 0.5em 2em;
+    font-size: x-large;
+    text-transform: uppercase;
+    margin-top: 90px;
+    animation: revealOpacity 0.5s linear 2s, marginTop 1s ease-in-out 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes revealOpacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes marginTop {
+    from {
+        margin-top: 90px;
+    }
+    to {
+        margin-top: 15px;
+    }
+}

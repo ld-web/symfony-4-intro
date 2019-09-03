@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} Liste des offres
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="mt-3 mb-3">Offres d'emploi</h1>
+        {% if offres %}
+            <div class="card-columns">
+                {% for offre in offres %}
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ offre.title}}</h5>
+                            <p class="card-text">{{ offre.description }}</p>
+                            <a href="#" class="btn btn-primary">En savoir +</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <h2>Aucune offre trouvée</h2>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} Trouve un job en traversant la rue !
+{% endblock %}
+
+{% block content %}
+<div id="home-bg">
+</div>
+<div id="home-content">
+    <h1>Un Job<br />de l'autre côté<br />de la rue</h1>
+    <a href="{{ path('offres_list') }}" class="btn btn-primary btn-lg">Je traverse</a>
+</div>
+{% endblock %}
